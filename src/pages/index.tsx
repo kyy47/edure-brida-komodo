@@ -1,12 +1,7 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import ButtonPrimary from "@/components/button/ButtonPrimary";
 
 export default function Home() {
   return (
-    <div className="mt-20 d-flex items-center justify-center text-teal-400">
-      <p className="text-center">This is komodo project</p>
-    </div>
+    <div className="flex flex-col gap-3 items-center justify-center text-teal-400 w-[100vw] bg-white h-[200vh] font-quicksand "></div>
   );
 }
