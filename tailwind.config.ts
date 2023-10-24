@@ -27,10 +27,9 @@ const config: Config = {
           900: "#762535",
           950: "#47101a",
         },
+        secondary: "#5C5C5C",
       },
-      fontFamily: {
-        quicksand: ["Quicksand", "sans-serif"],
-      },
+
       screens: {
         xs: "360px",
         // => @media (min-width: 360px) { ... }
@@ -52,6 +51,14 @@ const config: Config = {
       },
       fontSize: {
         "6xl": "3.5rem",
+      },
+      spacing: {
+        "6.25": "6.25rem",
+        "10%": "10vh",
+      },
+      height: {
+        "10%": "10vh",
+        "hero-fixed": "213px",
       },
     },
   },

@@ -1,7 +1,18 @@
-import ButtonPrimary from "@/components/button/ButtonPrimary";
-
+import CommunitySection from "@/components/CommunitySection";
+import HeroSection from "@/components/HeroSection";
+import Navbar from "@/components/Navbar";
+import QuizSection from "@/components/QuizSection";
+import TrackingSection from "@/components/TrackingSection";
+import { Quicksand } from "next/font/google";
+const quickdsand = Quicksand({ subsets: ["latin"] });
 export default function Home() {
   return (
-    <div className="flex flex-col gap-3 items-center justify-center text-teal-400 w-[100vw] bg-white h-[200vh] font-quicksand "></div>
+    <div className={` ${quickdsand.className}`}>
+      <Navbar />
+      <HeroSection />
+      <TrackingSection />
+      <CommunitySection />
+      <QuizSection />
+    </div>
   );
 }
