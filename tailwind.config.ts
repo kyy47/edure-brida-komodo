@@ -55,6 +55,8 @@ const config: Config = {
       spacing: {
         "6.25": "6.25rem",
         "10%": "10vh",
+        "15%": "15vh",
+        "20%": "20vh",
       },
       height: {
         "10%": "10vh",

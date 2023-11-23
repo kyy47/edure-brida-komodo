@@ -1,6 +1,6 @@
 export const list_menu = [
   {
-    id: "track",
+    id: "trackcycle",
     value: "Track Cycle",
   },
   {
