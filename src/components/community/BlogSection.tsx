@@ -18,9 +18,10 @@ function BlogSection() {
       </div>
       <div className="grid md:grid-cols-3 w-full px-6.25 gap-5 mt-4">
         {data.map(
-          ({ img, tag, title, description, authorImg, author, date }) => (
+          ({ id, img, tag, title, description, authorImg, author, date }) => (
             <CardBlog
               img={img}
+              key={id}
               tag={tag}
               title={title}
               description={description}
