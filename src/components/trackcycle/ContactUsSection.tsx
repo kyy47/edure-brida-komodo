@@ -60,8 +60,8 @@ function ContactUsSection() {
           </div>
           <div className="flex gap-3 items-center">
             <svg
-              width="43"
-              height="50"
+              width="37"
+              height="45"
               viewBox="0 0 32 46"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

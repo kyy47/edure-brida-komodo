@@ -6,11 +6,12 @@ import HeroSection from "@/components/home/HeroSection";
 import ImageSection from "@/components/home/ImageSection";
 import SimpleSection from "@/components/home/SimpleSection";
 import Layout from "@/components/layout/Layout";
+import ContactUsSection from "@/components/trackcycle/ContactUsSection";
 export default function Home() {
   return (
     <Layout>
       <HeroSection />
-      <SimpleSection variant="right-0">
+      <SimpleSection>
         <div className="md:flex-[.8] flex flex-col gap-6 py-3 ">
           <Heading className="mt-[40px]">
             Track Your Menstrual Cycle with Ease
@@ -31,7 +32,7 @@ export default function Home() {
           variant="object-contain"
         />
       </SimpleSection>
-      <SimpleSection variant="right-0" className="mt-20">
+      <SimpleSection className="mt-20">
         <Heading className="md:flex-[.8]">
           Join Our Online Discussion Forum Today
         </Heading>
@@ -65,7 +66,7 @@ export default function Home() {
           </ButtonPrimary>
         </div>
       </SimpleSection>
-      <ContactSection />
+      <ContactUsSection />
     </Layout>
   );
 }

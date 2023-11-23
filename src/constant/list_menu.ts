@@ -1,5 +1,9 @@
 export const list_menu = [
   {
+    id: "",
+    value: "Home",
+  },
+  {
     id: "trackcycle",
     value: "Track Cycle",
   },

@@ -5,7 +5,7 @@ import SosmedIcon from "./SosmedIcon";
 
 function Footer() {
   return (
-    <footer className="w-full   bg-black py-4 gap-x-11 px-6.25 mt-20">
+    <footer className="w-full   bg-black py-4 gap-x-11 px-6.25 mt-20  ">
       <div className=" grid sm:grid-cols-2 md:grid-cols-4 gap-x-11 border-b-2 border-b-gray-800 py-4">
         <div>
           <Heading className="font-bold text-white">Edure</Heading>
@@ -50,10 +50,10 @@ function Footer() {
             <div className="relative">
               <input
                 type="email"
-                className="peer py-3 pe-0 ps-8 block w-full bg-transparent border-t-transparent border-b border-x-transparent border-b-gray-700 text-sm text-zinc-400 "
+                className="peer py-3  pe-0 ps-10 block w-full bg-transparent border-t-transparent border-b border-x-transparent border-b-gray-700 text-sm text-zinc-400 "
                 placeholder="Enter your email id"
               />
-              <div className="absolute inset-y-0 -left-2 start-0 flex items-center pointer-events-none ps-2 ">
+              <div className="absolute inset-y-0 -left-[3px] start-0 flex items-center pointer-events-none ps-2 ">
                 <svg
                   fill="none"
                   stroke="white"

@@ -5,7 +5,7 @@ import ButtonPrimary from "../micro/ButtonPrimary";
 
 function Navbar() {
   return (
-    <header className="flex flex-wrap sm:justify-start  sm:flex-nowrap z-50 w-full bg-white text-sm py-4 shadow-lg fixed top-0 left-0 right-0 ">
+    <header className="flex flex-wrap sm:justify-start  sm:flex-nowrap z-50 w-full bg-white text-sm py-4 shadow-lg fixed top-0 left-0 right-0 lg:px-5">
       <nav
         className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center justify-between"
         aria-label="Global"

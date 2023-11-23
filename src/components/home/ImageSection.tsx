@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 type ImageSectionProps = {
-  url: string;
+  url: string | StaticImageData;
   className?: string;
   variant?: "object-contain" | "object-cover";
 };
@@ -18,7 +18,7 @@ function ImageSection({
         src={url}
         fill
         priority
-        className={`${variant}`}
+        className={`${variant} object-center`}
       />
     </div>
   );

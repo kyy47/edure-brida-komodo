@@ -9,7 +9,7 @@ type LayoutProps = {
 };
 function Layout({ children }: LayoutProps) {
   return (
-    <div className={` ${quickdsand.className}`}>
+    <div className={` ${quickdsand.className} `}>
       <Navbar />
       <main>{children}</main>
       <Footer />

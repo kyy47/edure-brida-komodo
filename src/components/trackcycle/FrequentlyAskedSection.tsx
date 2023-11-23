@@ -14,7 +14,7 @@ function FrequentlyAskedSection() {
     <section className="grid md:grid-cols-2 gap-4 px-6.25 mt-20">
       <div className="flex flex-col gap-2">
         <Heading>Frequently Asked Questions</Heading>
-        <Description fontSize="text-sm">
+        <Description fontSize="text-sm" className="max-w-sm">
           Find answer to common questions and concerns about Menstrual cycle
           Tracker and its usage.
         </Description>
