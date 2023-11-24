@@ -11,7 +11,7 @@ function JoinDiscussionSection() {
         Join Our Online Discussion Forum Today
       </Heading>
       <div className=" flex flex-col gap-4">
-        <Description className=" md:max-w-md text-rightl">
+        <Description className=" md:max-w-md ">
           Engage with our vibrant community of users, where you can share your
           concerns, seek advice and find support. Our online discussion forum
           provides a safe space to connect with others who understand your
