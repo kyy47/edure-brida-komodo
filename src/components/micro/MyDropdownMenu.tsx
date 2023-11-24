@@ -35,7 +35,7 @@ function MyDropdownMenu({ children, list_menu }: MyDropdownMenuProps) {
         <DropdownMenuSeparator />
         <DropdownMenuGroup className="px-1 flex flex-col">
           {list_menu.map((menu) => (
-            <DropdownMenuItem className="">
+            <DropdownMenuItem key={menu.id}>
               <Link
                 href={`/${menu.id}`}
                 className="text-black w-full h-full hover:bg-slate-200 cursor-pointer rounded-md py-3 px-2"
