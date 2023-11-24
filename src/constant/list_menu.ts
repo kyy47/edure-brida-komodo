@@ -16,3 +16,8 @@ export const list_menu = [
     value: "Quiz",
   },
 ];
+
+export type MyMenuType = {
+  id: string;
+  value: string;
+};

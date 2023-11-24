@@ -3,8 +3,10 @@ import React from "react";
 import { list_menu } from "@/constant/list_menu";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
 function NavMenu() {
   const { asPath } = useRouter();
+
   return (
     <div
       id="navbar-alignment"
