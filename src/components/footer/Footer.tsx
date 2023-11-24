@@ -5,24 +5,27 @@ import SosmedIcon from "./SosmedIcon";
 
 function Footer() {
   return (
-    <footer className="w-full   bg-black py-4 gap-x-11 px-6.25 mt-20  ">
-      <div className=" grid sm:grid-cols-2 md:grid-cols-4 gap-x-11 border-b-2 border-b-gray-800 py-4">
+    <footer className="w-full  bg-black py-4 gap-x-11 px-4 md:px-6.25 mt-20  ">
+      <div className=" grid sm:grid-cols-2 md:grid-cols-4 gap-x-11 gap-y-4 border-b-2 border-b-gray-800 py-4">
         <div>
           <Heading className="font-bold text-white">Edure</Heading>
           <Description className="text-zinc-400 mt-3 text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ipsa
-            saepe aliquam quas voluptate necessitatibus error eligendi ad
-            exercitationem unde?
+            Whether you're seeking guidance, sharing experiences, or simply
+            looking to stay informed, our platform is here to support you every
+            step of the way.
           </Description>
         </div>
         <div>
           <h4 className="font-semibold text-white text-base">Office</h4>
           <div className="flex flex-col gap-2  mt-2">
             <Description className="text-zinc-400 text-sm">
-              Lorem ipsum dolor sit amet consectetur.
+              Jalan Raya Zamia, No.2 Desa Lelede, Banyumulek, Kediri, West
             </Description>
             <Description className="text-zinc-400 text-sm">
-              Lorem ipsum dolor sit amet consectetur.
+              Lombok Regency, West Nusa Tenggara 83362.
+            </Description>
+            <Description className="text-zinc-400 text-sm mt-3">
+              info@eduweb.co.id
             </Description>
           </div>
           <p className="font-semibold text-white text-xs mt-3">

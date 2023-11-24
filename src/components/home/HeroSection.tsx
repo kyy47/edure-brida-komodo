@@ -5,7 +5,7 @@ import ImageHero from "../micro/ImageHero";
 
 function HeroSection() {
   return (
-    <ImageHero className="bg-[url('../../public/hero_image.png')] items-center h-[50vh]">
+    <ImageHero className="bg-[url('../../public/hero_image.png')] items-center h-[40vh] md:h-[50vh] px-3">
       <Heading
         gravity="center"
         className="mt-16 md:mt-28 xl:mt-36 px-4  text-white"

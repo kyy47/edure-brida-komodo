@@ -6,7 +6,7 @@ import Description from "../micro/Description";
 function HeroSection() {
   return (
     <ImageHero
-      className="bg-[url('../../public/hero_image_community.png')] py-10 px-6.25 bg-contain
+      className="bg-[url('../../public/hero_image_community.png')] py-10 px-4 lg:px-6.25 bg-contain
  "
     >
       <Heading className="text-white">Connect & Share</Heading>

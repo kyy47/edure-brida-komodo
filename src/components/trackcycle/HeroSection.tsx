@@ -8,7 +8,7 @@ import ButtonPrimary from "../micro/ButtonPrimary";
 function HeroSection() {
   return (
     <ImageHero
-      className="bg-[url('../../public/hero_image_track.png')] py-8 px-6.25 bg-contain 
+      className="bg-[url('../../public/hero_image_track.png')] py-8 px-4 lg:px-6.25 bg-cover bg-no-repeat
  "
       mt="mt-12"
     >

@@ -28,7 +28,7 @@ function ImageSection({
     );
   }
   return (
-    <div className={`w-full  relative ${className} `}>
+    <div className={`w-full  relative ${className} hidden md:block`}>
       <Image
         alt="hero image"
         src={url}

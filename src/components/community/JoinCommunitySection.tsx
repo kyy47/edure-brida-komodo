@@ -6,7 +6,7 @@ import ButtonPrimary from "../micro/ButtonPrimary";
 
 function JoinCommunitySection() {
   return (
-    <section className="px-6.25 mt-20 flex flex-col gap-4 items-center">
+    <section className="px-4 lg:px-6.25 mt-20 flex flex-col gap-4 items-center">
       <Heading className="text-center">Join Our Community for Support </Heading>
       <Description fontSize="text-sm" className="text-center">
         Connect with others, share experiences and get expert advice

@@ -7,16 +7,16 @@ import ButtonPrimary from "../micro/ButtonPrimary";
 
 function BlogSection() {
   return (
-    <section className="flex flex-col gap-5 items-center mt-16">
-      <div>
-        <Heading className="text-black text-center">
+    <section className="flex flex-col gap-5 items-center mt-16 px-4 lg:px-6.25">
+      <div className="w-full">
+        <Heading className="text-black lg:text-center">
           Stay Informed and Engaged
         </Heading>
-        <Description fontSize="text-sm" className="text-center mt-2">
+        <Description fontSize="text-sm" className="lg:text-center mt-2">
           Discover the latest forum and join conversation
         </Description>
       </div>
-      <div className="grid md:grid-cols-3 w-full px-6.25 gap-5 mt-4">
+      <div className="grid md:grid-cols-3 w-full  gap-5 mt-4">
         {data.map(
           ({ id, img, tag, title, description, authorImg, author, date }) => (
             <CardBlog

@@ -9,7 +9,7 @@ function KnowYourCycleSection() {
     setisModalOpen(!isModalOpen);
   };
   return (
-    <section className="mt-15% px-6.25">
+    <section className="mt-15% px-4 lg:px-6.25">
       <Heading className="text-black">Know Your Cycle</Heading>
       <div className="flex flex-col gap-3">
         <Description className="max-w-xl mt-4" fontSize="text-base">

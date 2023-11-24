@@ -13,7 +13,7 @@ function SimpleSection({ children, className, variant }: TrackingSectionProps) {
           ? "pl-6.25 pr-0"
           : variant == "left-0"
           ? "pl-0 pr-6.25"
-          : "px-6.25"
+          : "px-4 lg:px-6.25"
       } my-10  flex  flex-wrap scroll-m-10% ${className}`}
     >
       {children}

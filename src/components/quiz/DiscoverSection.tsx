@@ -8,7 +8,7 @@ import Heading from "../micro/Heading";
 function DiscoverSection() {
   return (
     <ImageHero
-      className="bg-[url('../../public/quiz_image_3.png')] py-8 px-6.25 bg-contain
+      className="bg-[url('../../public/quiz_image_3.png')] py-8 px-4 lg:px-6.25 bg-cover bg-no-repeat w-full
  "
       mt="0"
     >

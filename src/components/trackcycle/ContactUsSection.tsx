@@ -8,7 +8,7 @@ import ButtonPrimary from "../micro/ButtonPrimary";
 
 function ContactUsSection() {
   return (
-    <section className="grid md:grid-cols-2 gap-4 px-6.25 mt-20">
+    <section className="grid md:grid-cols-2 gap-4 px-4 lg:px-6.25 mt-20">
       <div className="flex flex-col gap-2">
         <Heading>Get in Touch</Heading>
         <Description fontSize="text-sm">

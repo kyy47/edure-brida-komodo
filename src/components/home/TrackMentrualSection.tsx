@@ -9,7 +9,7 @@ function TrackMentrualSection() {
   return (
     <SimpleSection className="justify-between">
       <div className=" flex flex-col gap-6 py-3 max-w-md ">
-        <Heading className="mt-[40px]">
+        <Heading className="md:mt-[40px]">
           Track Your Menstrual Cycle with Ease
         </Heading>
         <Description className="max-w-lg">
