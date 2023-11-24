@@ -2,8 +2,13 @@ import React from "react";
 import Edure from "./Edure";
 import NavMenu from "./NavMenu";
 import ButtonPrimary from "../micro/ButtonPrimary";
+import { useRouter } from "next/router";
 
 function Navbar() {
+  const router = useRouter();
+  const handleClickLogin = () => {
+    router.push("/login");
+  };
   return (
     <header className="flex flex-wrap sm:justify-start  sm:flex-nowrap z-50 w-full bg-white text-sm py-4 shadow-lg fixed top-0 left-0 right-0 lg:px-5">
       <nav
@@ -55,8 +60,12 @@ function Navbar() {
           </div>
         </div>
         <NavMenu />
-        <ButtonPrimary variant="small-outline" className="hidden sm:block ">
-          Sign Up
+        <ButtonPrimary
+          variant="small-outline"
+          className="hidden sm:block "
+          onClick={handleClickLogin}
+        >
+          Login
         </ButtonPrimary>
       </nav>
     </header>

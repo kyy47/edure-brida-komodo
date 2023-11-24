@@ -1,5 +1,5 @@
-import ImageSection from "@/components/home/ImageSection";
-import SimpleSection from "@/components/home/SimpleSection";
+import ImageSection from "@/components/micro/ImageSection";
+import SimpleSection from "@/components/micro/SimpleSection";
 import Layout from "@/components/layout/Layout";
 import ButtonPrimary from "@/components/micro/ButtonPrimary";
 import Description from "@/components/micro/Description";
@@ -53,7 +53,7 @@ function Quiz() {
         <ImageSection
           url="/quiz_image_1.png"
           variant="object-contain"
-          className="hidden sm:block md:flex-1 sm:w-[350px] sm:h-[350px] -right-24 -top-20"
+          className="hidden sm:block md:flex-1 sm:w-[350px] sm:h-[350px]  -top-10"
         />
       </SimpleSection>
       <DiscoverSection />
@@ -90,13 +90,13 @@ function Quiz() {
             </div>
             <div className="flex gap-5 items-center ">
               <svg
-                width="24"
-                height="25"
+                width={24}
+                height={25}
                 viewBox="0 0 24 25"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_886_3475)">
+                <g clipPath="url(#clip0_886_3475)">
                   <path
                     d="M11 8.89111H13V9.89111H11V8.89111ZM11 4.89111H13V5.89111H11V4.89111ZM11 10.8911H13V11.8911H11V10.8911Z"
                     fill="black"
@@ -121,8 +121,8 @@ function Quiz() {
                 <defs>
                   <clipPath id="clip0_886_3475">
                     <rect
-                      width="24"
-                      height="24"
+                      width={24}
+                      height={24}
                       fill="white"
                       transform="translate(0 0.891113)"
                     />

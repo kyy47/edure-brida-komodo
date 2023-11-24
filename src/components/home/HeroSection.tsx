@@ -1,7 +1,7 @@
 import React from "react";
 import Heading from "../micro/Heading";
 import Description from "../micro/Description";
-import ImageHero from "./ImageHero";
+import ImageHero from "../micro/ImageHero";
 
 function HeroSection() {
   return (

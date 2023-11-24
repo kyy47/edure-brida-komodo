@@ -1,5 +1,5 @@
 import React from "react";
-import ImageHero from "../home/ImageHero";
+import ImageHero from "../micro/ImageHero";
 import Description from "../micro/Description";
 import InputPrimary from "../micro/InputPrimary";
 import ButtonPrimary from "../micro/ButtonPrimary";

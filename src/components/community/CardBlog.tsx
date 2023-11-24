@@ -1,5 +1,5 @@
 import React from "react";
-import ImageSection from "../home/ImageSection";
+import ImageSection from "../micro/ImageSection";
 import Description from "../micro/Description";
 import Image, { StaticImageData } from "next/image";
 import hero_1 from "../../images/blog/blog_1.png";
