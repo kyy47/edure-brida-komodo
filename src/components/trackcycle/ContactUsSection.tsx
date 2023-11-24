@@ -95,7 +95,7 @@ function ContactUsSection() {
         <MyInput label="Email" placeholder="enter your email" type="email" />
         <MyTextArea label="Message" placeholder="enter your message" rows={7} />
         <MyCheckbox label="I agree to the Terms" />
-        <ButtonPrimary variant="small-solid">Send</ButtonPrimary>
+        <ButtonPrimary variant="medium-solid">Send</ButtonPrimary>
       </div>
     </section>
   );

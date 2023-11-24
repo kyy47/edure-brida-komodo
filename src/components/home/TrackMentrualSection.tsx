@@ -18,7 +18,7 @@ function TrackMentrualSection() {
           record and analyze your menstrual cycles, complete with a personalized
           calender.
         </Description>
-        <ButtonPrimary variant="small-outline" className="w-fit">
+        <ButtonPrimary variant="medium-outline" className="w-fit">
           Learn More
         </ButtonPrimary>
       </div>

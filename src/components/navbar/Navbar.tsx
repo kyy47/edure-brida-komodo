@@ -61,7 +61,7 @@ function Navbar() {
         </div>
         <NavMenu />
         <ButtonPrimary
-          variant="small-outline"
+          variant="medium-outline"
           className="hidden sm:block "
           onClick={handleClickLogin}
         >

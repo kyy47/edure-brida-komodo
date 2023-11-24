@@ -8,8 +8,9 @@ import ButtonPrimary from "../micro/ButtonPrimary";
 function HeroSection() {
   return (
     <ImageHero
-      className="bg-[url('../../public/hero_image_track.png')] py-8 px-6.25 bg-contain
+      className="bg-[url('../../public/hero_image_track.png')] py-8 px-6.25 bg-contain 
  "
+      mt="mt-12"
     >
       <Heading className="text-white">Start Tracking Your Cycle Today</Heading>
       <div className="flex flex-col gap-4">
@@ -22,7 +23,7 @@ function HeroSection() {
             placeholder="Your email address"
             className="w-[320px]"
           />
-          <ButtonPrimary variant="small-solid">Get Started</ButtonPrimary>
+          <ButtonPrimary variant="medium-solid">Get Started</ButtonPrimary>
         </div>
         <Description className="text-white text-sm">
           By signing up. you agree to our{" "}

@@ -18,7 +18,7 @@ function JoinCommunitySection() {
           variant="outline"
         />
 
-        <ButtonPrimary variant="small-solid">Get Started</ButtonPrimary>
+        <ButtonPrimary variant="medium-solid">Get Started</ButtonPrimary>
       </div>
       <Description fontSize="text-sm">
         By signing up. you agree to our

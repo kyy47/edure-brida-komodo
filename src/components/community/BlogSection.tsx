@@ -32,7 +32,7 @@ function BlogSection() {
           )
         )}
       </div>
-      <ButtonPrimary variant="small-outline" className="mt-3">
+      <ButtonPrimary variant="medium-outline" className="mt-3">
         View All
       </ButtonPrimary>
     </section>

@@ -28,7 +28,7 @@ function Community() {
             forum. Connect with a community of like-minded individuals, share
             your concern and seek advice on menstrual health and weliness.
           </Description>
-          <ButtonPrimary variant="small-outline" className="w-fit">
+          <ButtonPrimary variant="medium-outline" className="w-fit">
             Explore
           </ButtonPrimary>
         </div>

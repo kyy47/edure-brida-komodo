@@ -19,8 +19,8 @@ function Quiz() {
             the first step towards better self-care.
           </Description>
           <div className="flex gap-3">
-            <ButtonPrimary variant="small-solid">Start</ButtonPrimary>
-            <ButtonPrimary variant="small-outline">Learn More</ButtonPrimary>
+            <ButtonPrimary variant="medium-solid">Start</ButtonPrimary>
+            <ButtonPrimary variant="medium-outline">Learn More</ButtonPrimary>
           </div>
         </div>
       </SimpleSection>
@@ -48,7 +48,7 @@ function Quiz() {
               </Description>
             </div>
           </div>
-          <ButtonPrimary variant="small-solid">Get started</ButtonPrimary>
+          <ButtonPrimary variant="medium-solid">Get started</ButtonPrimary>
         </div>
         <ImageSection
           url="/quiz_image_1.png"

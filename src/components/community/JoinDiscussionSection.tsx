@@ -12,8 +12,8 @@ function JoinDiscussionSection() {
         Share your concerns and seek from community.
       </Description>
       <div className="flex gap-4">
-        <ButtonPrimary variant="small-solid">Start</ButtonPrimary>
-        <ButtonPrimary variant="small-outline">Explore</ButtonPrimary>
+        <ButtonPrimary variant="medium-solid">Start</ButtonPrimary>
+        <ButtonPrimary variant="medium-outline">Explore</ButtonPrimary>
       </div>
     </section>
   );

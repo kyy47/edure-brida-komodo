@@ -17,7 +17,7 @@ function JoinDiscussionSection() {
           provides a safe space to connect with others who understand your
           experience.
         </Description>
-        <ButtonPrimary variant="small-outline">Learn More</ButtonPrimary>
+        <ButtonPrimary variant="medium-outline">Learn More</ButtonPrimary>
       </div>
     </SimpleSection>
   );

@@ -25,7 +25,7 @@ function DiscoverSection() {
             placeholder="Your email address"
             className="w-[320px]"
           />
-          <ButtonPrimary variant="small-solid">Get Started</ButtonPrimary>
+          <ButtonPrimary variant="medium-solid">Get Started</ButtonPrimary>
         </div>
         <Description className="text-white text-sm">
           By signing up. you agree to our{" "}

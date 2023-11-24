@@ -5,7 +5,7 @@ import ButtonPrimary from "../micro/ButtonPrimary";
 
 function EffortleslyTrackSection() {
   return (
-    <section className="flex flex-col gap-6 mt-10 items-center px-6.25">
+    <section className="flex flex-col gap-6 mt-16 items-center px-6.25">
       <Heading className="text-center max-w-3xl">
         Effortlessly Track Your Menstrual Cycle with Our Tracker
       </Heading>
@@ -93,8 +93,8 @@ function EffortleslyTrackSection() {
         </div>
       </div>
       <div className="flex justify-center gap-4 ">
-        <ButtonPrimary variant="small-solid">Get Started</ButtonPrimary>
-        <ButtonPrimary variant="small-outline">Learn More</ButtonPrimary>
+        <ButtonPrimary variant="medium-solid">Get Started</ButtonPrimary>
+        <ButtonPrimary variant="medium-outline">Learn More</ButtonPrimary>
       </div>
     </section>
   );

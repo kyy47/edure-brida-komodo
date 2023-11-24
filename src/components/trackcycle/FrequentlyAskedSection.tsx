@@ -18,7 +18,7 @@ function FrequentlyAskedSection() {
           Find answer to common questions and concerns about Menstrual cycle
           Tracker and its usage.
         </Description>
-        <ButtonPrimary variant="small-outline">Contact</ButtonPrimary>
+        <ButtonPrimary variant="medium-outline">Contact</ButtonPrimary>
       </div>
       <div>
         <Accordion type="single" collapsible className="w-full">

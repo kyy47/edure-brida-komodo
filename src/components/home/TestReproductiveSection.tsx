@@ -20,7 +20,7 @@ function TestReproductiveSection() {
           more about your body. Start tracking your menstrual cycle and gain
           insight with our personalized calender.
         </Description>
-        <ButtonPrimary variant="small-outline" className="w-fit">
+        <ButtonPrimary variant="medium-outline" className="w-fit">
           Learn More
         </ButtonPrimary>
       </div>
