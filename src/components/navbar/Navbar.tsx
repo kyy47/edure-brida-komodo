@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import Edure from "./Edure";
 import NavMenu from "./NavMenu";
 import ButtonPrimary from "../micro/ButtonPrimary";
 import { useRouter } from "next/router";
 import { list_menu } from "@/constant/list_menu";
 import MyDropdownMenu from "../micro/MyDropdownMenu";
-
+import { useCookies } from "react-cookie";
 function Navbar() {
+  const [, , removeCookie] = useCookies();
   const router = useRouter();
-  const handleClickLogin = () => {
-    router.push("/login");
+  const handleClickLogout = () => {
+    removeCookie("token");
+    router.replace("/login");
   };
+
   return (
     <header className="flex flex-wrap sm:justify-start  sm:flex-nowrap z-50 w-full bg-white text-sm py-4 shadow-lg fixed top-0 left-0 right-0 lg:px-5">
       <nav
@@ -21,8 +24,7 @@ function Navbar() {
           <Edure />
           <div className="sm:hidden">
             <MyDropdownMenu list_menu={list_menu}>
-              <button
-                type="button"
+              <div
                 className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50"
                 data-hs-collapse="#navbar-alignment"
                 aria-controls="navbar-alignment"
@@ -59,7 +61,7 @@ function Navbar() {
                   <path d="M18 6 6 18" />
                   <path d="m6 6 12 12" />
                 </svg>
-              </button>
+              </div>
             </MyDropdownMenu>
           </div>
         </div>
@@ -67,9 +69,9 @@ function Navbar() {
         <ButtonPrimary
           variant="medium-outline"
           className="hidden sm:block "
-          onClick={handleClickLogin}
+          onClick={handleClickLogout}
         >
-          Login
+          Logout
         </ButtonPrimary>
       </nav>
     </header>

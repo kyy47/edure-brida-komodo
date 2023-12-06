@@ -1,16 +1,30 @@
 import ButtonPrimary from "@/components/micro/ButtonPrimary";
-import MyCheckbox from "@/components/micro/MyCheckbox";
 import MyInput from "@/components/micro/MyInput";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { FormEvent } from "react";
+import axios from "axios";
 
 function Register() {
   const router = useRouter();
   const toLogin = () => {
     router.push("/login");
   };
+
+  const registerHandler = async (e: FormEvent) => {
+    e.preventDefault();
+    const formElement = e.target as HTMLFormElement;
+    const formData = new FormData(formElement);
+    const formDataJson = Object.fromEntries(formData.entries());
+
+    const result = await axios.post(
+      "http://localhost:3000/api/register",
+      formDataJson
+    );
+    console.log(result);
+  };
+
   return (
     <div
       className="w-full flex items-center justify-center px-10 min-h-[100vh] 
@@ -44,32 +58,39 @@ function Register() {
             </ButtonPrimary>
             <ButtonPrimary variant="small-solid">Register</ButtonPrimary>
           </div>
-          <div className="flex flex-col gap-5 w-full">
-            <MyInput
-              label="Username"
-              placeholder="Register your username"
-              type="text"
-              variant="login"
-              className="w-full"
-            />
-            <MyInput
-              label="Email"
-              placeholder="Register your email"
-              type="email"
-              variant="login"
-              className="w-full"
-            />
-            <MyInput
-              label="Password"
-              placeholder="Register your password"
-              type="password"
-              variant="login"
-              className="w-full"
-            />
-          </div>
-          <div className="flex justify-end w-full">
-            <ButtonPrimary variant="medium-solid">Register</ButtonPrimary>
-          </div>
+          <form
+            onSubmit={registerHandler}
+            className="flex flex-col w-full gap-4"
+          >
+            <div className="flex flex-col gap-5 w-full">
+              <MyInput
+                label="Username"
+                placeholder="Register your username"
+                type="text"
+                variant="login"
+                className="w-full"
+              />
+              <MyInput
+                label="Email"
+                placeholder="Register your email"
+                type="email"
+                variant="login"
+                className="w-full"
+              />
+              <MyInput
+                label="Password"
+                placeholder="Register your password"
+                type="password"
+                variant="login"
+                className="w-full"
+              />
+            </div>
+            <div className="flex justify-end w-full">
+              <ButtonPrimary variant="medium-solid" type="submit">
+                Register
+              </ButtonPrimary>
+            </div>
+          </form>
         </div>
       </div>
     </div>

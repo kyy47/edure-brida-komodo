@@ -1,6 +1,4 @@
-import { type } from "os";
 import React from "react";
-import { InputType } from "zlib";
 import Description from "./Description";
 import Link from "next/link";
 
@@ -22,15 +20,13 @@ function MyInput({
     return (
       <>
         <div>
-          <label
-            htmlFor="with-corner-hint"
-            className="block text-base font-semibold mb-2"
-          >
+          <label htmlFor={label} className="block text-base font-semibold mb-2">
             {label}
           </label>
           <input
             type={type}
             id={label}
+            name={label.toLowerCase()}
             className={`py-4 px-6 block w-full  rounded-lg text-sm border-2 border-cranberry-500 focus:border-cranberry-300  focus:outline-cranberry-300 ${className} `}
             placeholder={placeholder}
           />
@@ -42,15 +38,13 @@ function MyInput({
     return (
       <>
         <div>
-          <label
-            htmlFor="with-corner-hint"
-            className="block text-base font-semibold mb-2"
-          >
+          <label htmlFor={label} className="block text-base font-semibold mb-2">
             {label}
           </label>
           <input
             type={type}
             id={label}
+            name={label.toLowerCase()}
             className={`py-4 px-6 block w-full  rounded-lg text-sm border-2 border-cranberry-500 focus:border-cranberry-300  focus:outline-cranberry-300 ${className} `}
             placeholder={placeholder}
           />
