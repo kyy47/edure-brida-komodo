@@ -42,7 +42,7 @@ function Login() {
       <Snackbar />
       <div
         className="w-full flex items-center justify-center px-10 min-h-[100vh] 
-      py-6 max-w-5xl
+      py-6 max-w-5xl 
       "
       >
         <div className="grid md:grid-cols-2 w-full lg:gap-20 items-center">

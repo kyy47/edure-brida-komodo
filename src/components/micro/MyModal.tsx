@@ -88,7 +88,6 @@ function MyModal({
   }
 
   if (type === "with-input-calendar") {
-    const [date, setDate] = React.useState<Date | undefined>(new Date());
     return (
       <div className=" backdrop-blur-sm w-full h-full fixed top-0 start-0 z-[60] overflow-x-hidden overflow-y-auto pointer-events-none ">
         <div className="mt-7 opacity-100 duration-500  ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
@@ -99,8 +98,8 @@ function MyModal({
             <div className="flex flex-col gap-2 w-full px-3 justify-center items-center">
               <Calendar
                 mode="single"
-                selected={date}
-                onSelect={(e) => setDate(e)}
+                selected={state}
+                onSelect={(e) => setMyState(e)}
                 className="rounded-md border pointer-events-auto cursor-pointer"
               />
               <ButtonPrimary

@@ -6,7 +6,7 @@ import ButtonPrimary from "../micro/ButtonPrimary";
 function EffortleslyTrackSection() {
   return (
     <section className="flex flex-col gap-6 mt-16 items-center px-4 lg:px-6.25">
-      <Heading className="text-center max-w-3xl">
+      <Heading className="text-center max-w-3xl ">
         Effortlessly Track Your Menstrual Cycle with Our Tracker
       </Heading>
       <Description className="max-w-4xl text-center" fontSize="text-base">
