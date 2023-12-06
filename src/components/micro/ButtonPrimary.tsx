@@ -82,7 +82,7 @@ function ButtonPrimary({
         {...props}
         type={type}
         onClick={onClick}
-        className=" px-6 py-4 text-cranberry-600 rounded-lg font-normal text-base w-fit"
+        className={`px-6 py-4 text-cranberry-600 rounded-lg font-normal text-base w-fit ${className}`}
       >
         {children}
       </button>

@@ -6,7 +6,7 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { FormEvent, useEffect } from "react";
+import React, { FormEvent } from "react";
 
 function Login() {
   const router = useRouter();
@@ -38,11 +38,11 @@ function Login() {
   };
 
   return (
-    <>
+    <div className="flex items-center justify-center">
       <Snackbar />
       <div
         className="w-full flex items-center justify-center px-10 min-h-[100vh] 
-      py-6
+      py-6 max-w-5xl
       "
       >
         <div className="grid md:grid-cols-2 w-full lg:gap-20 items-center">
@@ -53,7 +53,7 @@ function Login() {
               fill
               alt="login"
               sizes="100%"
-              className="object-contain"
+              className="object-contain object-center md:object-left"
             />
           </div>
           <div className="flex flex-col gap-4 items-center">
@@ -99,7 +99,7 @@ function Login() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

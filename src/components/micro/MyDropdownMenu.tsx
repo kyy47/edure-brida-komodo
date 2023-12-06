@@ -17,9 +17,14 @@ import { useRouter } from "next/router";
 type MyDropdownMenuProps = {
   children: React.ReactNode;
   list_menu: MyMenuType[];
+  onClickLogout: () => void;
 };
 
-function MyDropdownMenu({ children, list_menu }: MyDropdownMenuProps) {
+function MyDropdownMenu({
+  children,
+  list_menu,
+  onClickLogout,
+}: MyDropdownMenuProps) {
   const router = useRouter();
 
   const handleToLogin = () => {
@@ -51,9 +56,9 @@ function MyDropdownMenu({ children, list_menu }: MyDropdownMenuProps) {
           <ButtonPrimary
             variant="small-solid"
             className="w-full"
-            onClick={handleToLogin}
+            onClick={onClickLogout}
           >
-            Login
+            Logout
           </ButtonPrimary>
         </DropdownMenuItem>
       </DropdownMenuContent>
