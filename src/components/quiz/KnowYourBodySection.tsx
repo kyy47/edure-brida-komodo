@@ -3,8 +3,14 @@ import SimpleSection from "../micro/SimpleSection";
 import Heading from "../micro/Heading";
 import Description from "../micro/Description";
 import ButtonPrimary from "../micro/ButtonPrimary";
+import { useRouter } from "next/router";
 
 function KnowYourBodySection() {
+  const router = useRouter();
+
+  const startQuiz = () => {
+    router.replace("/quiz/start");
+  };
   return (
     <SimpleSection className="items-center mt-15% justify-between ">
       <Heading className="text-black">Know Your Body</Heading>
@@ -15,7 +21,9 @@ function KnowYourBodySection() {
           the first step towards better self-care.
         </Description>
         <div className="flex gap-3">
-          <ButtonPrimary variant="medium-solid">Start</ButtonPrimary>
+          <ButtonPrimary variant="medium-solid" onClick={startQuiz}>
+            Start
+          </ButtonPrimary>
           <ButtonPrimary variant="medium-outline">Learn More</ButtonPrimary>
         </div>
       </div>

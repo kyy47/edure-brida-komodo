@@ -1,10 +1,13 @@
 import React from "react";
 
-import { list_menu } from "@/constant/list_menu";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { MyMenuType } from "@/constant/list_menu";
 
-function NavMenu() {
+type NavMenuProps = {
+  list_menu: MyMenuType[];
+};
+function NavMenu({ list_menu }: NavMenuProps) {
   const { asPath } = useRouter();
 
   return (

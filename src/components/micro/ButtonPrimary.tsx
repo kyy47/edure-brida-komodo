@@ -4,7 +4,7 @@ type SizeVariant = "large" | "small" | "medium";
 type TypeVariant = "minimal" | "outline" | "solid";
 type ButtonPrimaryProps = {
   variant: `${SizeVariant}-${TypeVariant}`;
-  children: string;
+  children: React.ReactNode;
   className?: string;
   type?: "button" | "submit";
   props?: React.ComponentProps<"button">;

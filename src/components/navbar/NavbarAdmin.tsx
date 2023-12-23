@@ -3,19 +3,16 @@ import Edure from "./Edure";
 import NavMenu from "./NavMenu";
 import ButtonPrimary from "../micro/ButtonPrimary";
 import { useRouter } from "next/router";
-import { list_menu } from "@/constant/list_menu";
+import { list_menu_admin as list_menu } from "@/constant/list_menu";
 import MyDropdownMenu from "../micro/MyDropdownMenu";
 import { useCookies } from "react-cookie";
 
-function Navbar() {
-  const [cookie, setCookie, removeCookie] = useCookies(["token"]);
+function NavbarAdmin() {
+  const [, , removeCookie] = useCookies();
 
   const router = useRouter();
   const handleClickLogout = () => {
     removeCookie("token");
-    router.replace("/login");
-  };
-  const handleClickLogin = () => {
     router.replace("/login");
   };
 
@@ -74,26 +71,16 @@ function Navbar() {
           </div>
         </div>
         <NavMenu list_menu={list_menu} />
-        {!cookie.token ? (
-          <ButtonPrimary
-            variant="medium-outline"
-            className="hidden sm:block "
-            onClick={handleClickLogin}
-          >
-            Login
-          </ButtonPrimary>
-        ) : (
-          <ButtonPrimary
-            variant="medium-outline"
-            className="hidden sm:block "
-            onClick={handleClickLogout}
-          >
-            Logout
-          </ButtonPrimary>
-        )}
+        <ButtonPrimary
+          variant="medium-outline"
+          className="hidden sm:block "
+          onClick={handleClickLogout}
+        >
+          Logout
+        </ButtonPrimary>
       </nav>
     </header>
   );
 }
 
-export default Navbar;
+export default NavbarAdmin;
