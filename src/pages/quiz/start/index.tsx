@@ -12,7 +12,9 @@ function StartQuiz() {
   const [counter, setCounter] = useState<number>(0);
 
   const getDataQuiz = async () => {
-    const { data } = await axios.get("http://localhost:3000/api/quiz");
+    const { data } = await axios.get(
+      "https://edure-6o5drmeqn-codings-projects-094a695f.vercel.app/api/quiz"
+    );
     setQuiz(data);
   };
 

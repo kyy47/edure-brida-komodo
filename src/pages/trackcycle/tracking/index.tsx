@@ -68,7 +68,7 @@ function Tracking() {
     try {
       showSnackbar(true, "Loading...", "loading");
       const { data } = await axios.post(
-        "http://localhost:3000/api/track-cycle",
+        "https://edure-6o5drmeqn-codings-projects-094a695f.vercel.app/api/track-cycle",
         resultData
       );
 
@@ -88,7 +88,7 @@ function Tracking() {
   const getUserFromId = async (id: string) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/user/byid?id=${id}`
+        `https://edure-6o5drmeqn-codings-projects-094a695f.vercel.app/api/user/byid?id=${id}`
       );
       setName(data.username || "User");
     } catch (error: any) {

@@ -27,7 +27,7 @@ function Track() {
     try {
       showSnackbar(true, "get data...", "loading");
       const { data } = await axios.get(
-        `http://localhost:3000/api/track-cycle/trackinghistory?id_user=${id_user}`
+        `https://edure-6o5drmeqn-codings-projects-094a695f.vercel.app/api/track-cycle/trackinghistory?id_user=${id_user}`
       );
       setTrackData(data);
       showSnackbar(false, null, null);
@@ -49,7 +49,7 @@ function Track() {
       const {
         data: { result },
       } = await axios.delete(
-        `http://localhost:3000/api/track-cycle/trackinghistory?id=${id}`
+        `https://edure-6o5drmeqn-codings-projects-094a695f.vercel.app/api/track-cycle/trackinghistory?id=${id}`
       );
       setTrackData([...trackData].filter((item) => item.id !== result.id));
       showSnackbar(true, "delete data success", "success");
