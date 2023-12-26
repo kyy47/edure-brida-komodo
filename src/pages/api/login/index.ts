@@ -35,12 +35,12 @@ export default async function handler(
         loginData.password
       );
       if (!authStatus) return res.status(401).json({ message: "Unauthorized" });
-
-      res.setHeader(
-        "Set-Cookie",
-        `token=${jwtToken}; path=/; SameSite:Lax; Secure`
-      );
-      res.status(200).json(userData);
+      const cookies = [
+        `token=${jwtToken}; path=/; SameSite:Lax; Secure`,
+        `user_id=${userData.id}; path=/; SameSite:Lax; Secure`,
+      ];
+      res.setHeader("Set-Cookie", cookies);
+      res.status(200).json({ result: userData, message: "Login Success" });
     } catch (e) {
       res.status(500).json({ message: "Login Failed" });
     }

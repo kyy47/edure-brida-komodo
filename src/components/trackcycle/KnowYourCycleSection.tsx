@@ -10,6 +10,9 @@ function KnowYourCycleSection() {
     router.replace("/trackcycle/tracking");
   };
 
+  const seeAllHistoryTracking = () => {
+    router.replace("/trackcycle/trackhistory");
+  };
   return (
     <section className="mt-15% px-4 lg:px-6.25">
       <Heading className="text-black">Know Your Cycle</Heading>
@@ -21,6 +24,12 @@ function KnowYourCycleSection() {
         <div className="flex gap-3 mt-2">
           <ButtonPrimary variant="medium-solid" onClick={startTracking}>
             Start
+          </ButtonPrimary>
+          <ButtonPrimary
+            variant="medium-outline"
+            onClick={seeAllHistoryTracking}
+          >
+            See Your History
           </ButtonPrimary>
         </div>
       </div>

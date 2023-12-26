@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Edure from "./Edure";
 import NavMenu from "./NavMenu";
-import ButtonPrimary from "../micro/ButtonPrimary";
 import { useRouter } from "next/router";
 import { list_menu } from "@/constant/list_menu";
 import MyDropdownMenu from "../micro/MyDropdownMenu";
 import { useCookies } from "react-cookie";
+import ButtonPrimary from "../micro/ButtonPrimary";
 
 function Navbar() {
-  const [cookie, setCookie, removeCookie] = useCookies(["token"]);
+  const [cookie, setCookie, removeCookie] = useCookies(["token", "user_id"]);
+  const [isLogin, setIsLogin] = useState(false);
 
   const router = useRouter();
   const handleClickLogout = () => {
     removeCookie("token");
+    removeCookie("user_id");
     router.replace("/login");
   };
   const handleClickLogin = () => {
     router.replace("/login");
   };
+
+  useEffect(() => {
+    if (cookie.token) {
+      setIsLogin(true);
+    }
+  }, []);
 
   return (
     <header className="flex flex-wrap sm:justify-start  sm:flex-nowrap z-50 w-full bg-white text-sm py-4 shadow-lg fixed top-0 left-0 right-0 lg:px-5">
@@ -28,10 +36,7 @@ function Navbar() {
         <div className="flex items-center justify-between">
           <Edure />
           <div className="sm:hidden">
-            <MyDropdownMenu
-              list_menu={list_menu}
-              onClickLogout={handleClickLogout}
-            >
+            <MyDropdownMenu list_menu={list_menu}>
               <div
                 className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50"
                 data-hs-collapse="#navbar-alignment"
@@ -74,21 +79,21 @@ function Navbar() {
           </div>
         </div>
         <NavMenu list_menu={list_menu} />
-        {!cookie.token ? (
-          <ButtonPrimary
-            variant="medium-outline"
-            className="hidden sm:block "
-            onClick={handleClickLogin}
-          >
-            Login
-          </ButtonPrimary>
-        ) : (
+        {isLogin ? (
           <ButtonPrimary
             variant="medium-outline"
             className="hidden sm:block "
             onClick={handleClickLogout}
           >
             Logout
+          </ButtonPrimary>
+        ) : (
+          <ButtonPrimary
+            variant="medium-outline"
+            className="hidden sm:block "
+            onClick={handleClickLogin}
+          >
+            Login
           </ButtonPrimary>
         )}
       </nav>

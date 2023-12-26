@@ -22,15 +22,19 @@ function Login() {
     const formData = new FormData(formElement);
     const formDataJson = Object.fromEntries(formData.entries());
     try {
-      showSnackbar(true, "Loading....");
-      const result = await axios.post(
+      showSnackbar(true, "Login....", "loading");
+      const { data } = await axios.post(
         "http://localhost:3000/api/login",
         formDataJson
       );
-      showSnackbar(false, null);
-      if (result) router.replace("/");
+
+      showSnackbar(true, data.message, "success");
+      setTimeout(() => {
+        showSnackbar(false, null);
+      }, 2000);
+      if (data.result) router.replace("/");
     } catch (e: any) {
-      showSnackbar(true, e.response.data.message);
+      showSnackbar(true, e.response.data.message, "error");
       setTimeout(() => {
         showSnackbar(false, null);
       }, 2000);

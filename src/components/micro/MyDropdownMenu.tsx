@@ -13,22 +13,24 @@ import Link from "next/link";
 import ButtonPrimary from "./ButtonPrimary";
 import type { MyMenuType } from "@/constant/list_menu";
 import { useRouter } from "next/router";
+import { useCookies } from "react-cookie";
 
 type MyDropdownMenuProps = {
   children: React.ReactNode;
   list_menu: MyMenuType[];
-  onClickLogout: () => void;
 };
 
-function MyDropdownMenu({
-  children,
-  list_menu,
-  onClickLogout,
-}: MyDropdownMenuProps) {
+function MyDropdownMenu({ children, list_menu }: MyDropdownMenuProps) {
   const router = useRouter();
+  const [cookie, setCookie, removeCookie] = useCookies(["token", "user_id"]);
 
-  const handleToLogin = () => {
-    router.push("/login");
+  const handleClickLogout = () => {
+    removeCookie("token");
+    removeCookie("user_id");
+    router.replace("/login");
+  };
+  const handleClickLogin = () => {
+    router.replace("/login");
   };
   return (
     <DropdownMenu>
@@ -53,13 +55,23 @@ function MyDropdownMenu({
         <DropdownMenuSeparator />
 
         <DropdownMenuItem className="mt-2">
-          <ButtonPrimary
-            variant="small-solid"
-            className="w-full"
-            onClick={onClickLogout}
-          >
-            Logout
-          </ButtonPrimary>
+          {cookie.token ? (
+            <ButtonPrimary
+              variant="small-solid"
+              className="w-full"
+              onClick={handleClickLogout}
+            >
+              Logout
+            </ButtonPrimary>
+          ) : (
+            <ButtonPrimary
+              variant="small-solid"
+              className="w-full"
+              onClick={handleClickLogin}
+            >
+              Login
+            </ButtonPrimary>
+          )}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -9,7 +9,8 @@ type MyModalProps = {
     | "choice"
     | "with-input-number"
     | "with-input-calendar"
-    | "with-input-text";
+    | "with-input-text"
+    | "with-carousel-input";
   state?: Date;
   setMyState: React.Dispatch<React.SetStateAction<any>>;
 };
@@ -91,7 +92,7 @@ function MyModal({
     );
   }
   if (type === "with-input-number") {
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState(1);
     return (
       <div className=" backdrop-blur-sm w-full h-full fixed top-0 start-0 z-[60] overflow-x-hidden overflow-y-auto pointer-events-none ">
         <div className="mt-7 opacity-100 duration-500  ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
@@ -106,12 +107,12 @@ function MyModal({
                  focus:border-cranberry-300  focus:outline-cranberry-300 pointer-events-auto
                  cursor-pointer max-w-[100px] `}
                 value={inputValue}
-                onChange={({ target }) => setInputValue(target.value)}
+                onChange={({ target }) => setInputValue(parseInt(target.value))}
               />
               <ButtonPrimary
                 variant="medium-solid"
                 onClick={() => {
-                  setMyState(parseInt(inputValue));
+                  setMyState(inputValue);
                   onClickNext();
                 }}
                 className="pointer-events-auto cursor-pointer"
