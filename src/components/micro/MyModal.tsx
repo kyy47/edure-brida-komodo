@@ -11,7 +11,7 @@ type MyModalProps = {
     | "with-input-calendar"
     | "with-input-text"
     | "with-carousel-input";
-  state?: Date;
+  state?: Date | string | number;
   setMyState: React.Dispatch<React.SetStateAction<any>>;
 };
 function MyModal({
@@ -58,7 +58,6 @@ function MyModal({
   }
 
   if (type === "with-input-text") {
-    const [inputValue, setInputValue] = useState("");
     return (
       <div className=" backdrop-blur-sm w-full h-full fixed top-0 start-0 z-[60] overflow-x-hidden overflow-y-auto pointer-events-none ">
         <div className="mt-7 opacity-100 duration-500  ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
@@ -72,14 +71,13 @@ function MyModal({
                 className={`py-2 px-3 block rounded-lg text-lg text-center border-2 border-cranberry-500
                  focus:border-cranberry-300  focus:outline-cranberry-300 pointer-events-auto
                  cursor-pointer max-w-[200px] `}
-                value={inputValue}
-                onChange={({ target }) => setInputValue(target.value)}
+                value={state as string}
+                onChange={({ target }) => setMyState(target.value)}
               />
               <ButtonPrimary
                 variant="medium-solid"
                 onClick={() => {
                   onClickNext();
-                  setMyState(inputValue);
                 }}
                 className="pointer-events-auto cursor-pointer"
               >
@@ -92,7 +90,6 @@ function MyModal({
     );
   }
   if (type === "with-input-number") {
-    const [inputValue, setInputValue] = useState(1);
     return (
       <div className=" backdrop-blur-sm w-full h-full fixed top-0 start-0 z-[60] overflow-x-hidden overflow-y-auto pointer-events-none ">
         <div className="mt-7 opacity-100 duration-500  ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
@@ -106,13 +103,12 @@ function MyModal({
                 className={`py-2 px-3 block rounded-lg text-lg text-center border-2 border-cranberry-500
                  focus:border-cranberry-300  focus:outline-cranberry-300 pointer-events-auto
                  cursor-pointer max-w-[100px] `}
-                value={inputValue}
-                onChange={({ target }) => setInputValue(parseInt(target.value))}
+                value={state as number}
+                onChange={({ target }) => setMyState(parseInt(target.value))}
               />
               <ButtonPrimary
                 variant="medium-solid"
                 onClick={() => {
-                  setMyState(inputValue);
                   onClickNext();
                 }}
                 className="pointer-events-auto cursor-pointer"
@@ -137,7 +133,7 @@ function MyModal({
             <div className="flex flex-col gap-2 w-full px-3 justify-center items-center">
               <Calendar
                 mode="single"
-                selected={state}
+                selected={state as Date}
                 onSelect={(e) => setMyState(e)}
                 className="rounded-md border pointer-events-auto cursor-pointer"
               />

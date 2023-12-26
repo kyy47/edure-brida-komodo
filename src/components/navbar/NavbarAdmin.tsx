@@ -25,10 +25,7 @@ function NavbarAdmin() {
         <div className="flex items-center justify-between">
           <Edure />
           <div className="sm:hidden">
-            <MyDropdownMenu
-              list_menu={list_menu}
-              onClickLogout={handleClickLogout}
-            >
+            <MyDropdownMenu list_menu={list_menu}>
               <div
                 className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50"
                 data-hs-collapse="#navbar-alignment"
