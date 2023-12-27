@@ -24,7 +24,7 @@ function ManageQuiz() {
   const [updateIndex, setUpdateIndex] = useState<number>(0);
 
   const getData = async () => {
-    const { data } = await axios.get("https://edure.vercel.app/api/quiz");
+    const { data } = await axios.get("http://localhost:3000/api/quiz");
     console.log(data);
     setQuiz(
       data.map((item: QuizResponse) => ({
@@ -41,7 +41,7 @@ function ManageQuiz() {
 
   const handleDeleteQuestion = async (id: number) => {
     const { data: responseData } = await axios.delete(
-      `https://edure.vercel.app/api/quiz?id=${id}`
+      `http://localhost:3000/api/quiz?id=${id}`
     );
     setQuiz([...quiz.filter((item) => item.id !== responseData.id)]);
   };

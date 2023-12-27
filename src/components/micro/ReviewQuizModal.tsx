@@ -32,57 +32,55 @@ function ReviewQuizModal({
           </p>
           <div className="flex items-center flex-wrap gap-2 justify-center">
             {answersUser === "A" && answersUser === quiz.correctChoice ? (
-              <div className="flex gap-2.5 p-4 text-sm items-center rounded-md font-medium md:text-base lg:text-lg  flex-wrap border w-fit border-green-500 bg-green-50 ">
+              <div className="flex gap-4 p-4 text-sm items-center rounded-md font-medium  border w-fit border-green-500 bg-green-50 ">
                 <span className=" bg-black px-3 py-1 rounded-md text-white">
                   A
                 </span>{" "}
-                <p className="text-black text-lg font-normal text-center">
-                  {quiz.choiceA}
-                </p>
+                <p className="text-black text-lg font-normal">{quiz.choiceA}</p>
               </div>
             ) : answersUser === "A" && answersUser !== quiz.correctChoice ? (
-              <div className="flex w-fit gap-2.5  items-center p-4 text-sm font-medium md:text-base rounded-md lg:text-lg  border border-red-500 bg-red-50 ">
+              <div className="flex w-fit gap-4  items-center p-4 text-sm font-medium rounded-md border border-red-500 bg-red-50 ">
                 <span className=" bg-black px-3 py-1 rounded-md text-white">
                   A
                 </span>{" "}
-                <p className="text-black text-lg font-normal text-center">
+                <p className="text-black text-lg font-normal ">
                   {quiz.choiceA}
                 </p>
               </div>
             ) : (
-              <div className="flex w-fit gap-2.5  items-center p-4 text-sm font-medium md:text-base rounded-md lg:text-lg  border border-black bg-white ">
+              <div className="flex w-fit gap-4  items-center p-4 text-sm font-medium rounded-md border border-black bg-white ">
                 <span className=" bg-black px-3 py-1 rounded-md text-white">
                   A
                 </span>{" "}
-                <p className="text-black text-lg font-normal text-center">
+                <p className="text-black text-lg font-normal ">
                   {quiz.choiceA}
                 </p>
               </div>
             )}
             {answersUser === "B" && answersUser === quiz.correctChoice ? (
-              <div className="flex gap-2.5 p-4 text-sm items-center rounded-md font-medium md:text-base lg:text-lg  flex-wrap border w-fit border-green-500 bg-green-50 ">
+              <div className="flex gap-4 p-4 text-sm items-center rounded-md font-medium  border w-fit border-green-500 bg-green-50 ">
                 <span className=" bg-black px-3 py-1 rounded-md text-white">
                   B
                 </span>{" "}
-                <p className="text-black text-lg font-normal text-center">
+                <p className="text-black text-lg font-normal ">
                   {quiz.choiceB}
                 </p>
               </div>
             ) : answersUser === "B" && answersUser !== quiz.correctChoice ? (
-              <div className="flex w-fit gap-2.5  items-center p-4 text-sm font-medium md:text-base rounded-md lg:text-lg  border border-red-500 bg-red-50 ">
+              <div className="flex w-fit gap-4 items-center p-4 text-sm font-medium rounded-md  border border-red-500 bg-red-50 ">
                 <span className=" bg-black px-3 py-1 rounded-md text-white">
                   B
                 </span>{" "}
-                <p className="text-black text-lg font-normal text-center">
+                <p className="text-black text-lg font-normal ">
                   {quiz.choiceB}
                 </p>
               </div>
             ) : (
-              <div className="flex w-fit gap-2.5  items-center p-4 text-sm font-medium md:text-base rounded-md lg:text-lg  border border-black bg-white ">
+              <div className="flex w-fit gap-4 items-center p-4 text-sm font-medium rounded-md  border border-black bg-white ">
                 <span className=" bg-black px-3 py-1 rounded-md text-white">
                   B
                 </span>{" "}
-                <p className="text-black text-lg font-normal text-center">
+                <p className="text-black text-lg font-normal ">
                   {quiz.choiceB}
                 </p>
               </div>

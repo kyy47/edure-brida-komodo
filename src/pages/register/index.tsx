@@ -22,7 +22,7 @@ function Register() {
     try {
       showSnackbar(true, "Registered...", "loading");
       const { data } = await axios.post(
-        "https://edure.vercel.app/api/register",
+        "http://localhost:3000/api/register",
         formDataJson
       );
       showSnackbar(true, data.message, "success");

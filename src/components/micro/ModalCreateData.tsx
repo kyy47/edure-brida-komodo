@@ -21,7 +21,7 @@ function ModalCreateData({ setQuiz, setDataState }: ModalCreateDataProps) {
     };
 
     const { data } = await axios.post(
-      "https://edure.vercel.app/api/quiz",
+      "http://localhost:3000/api/quiz",
       dataReq
     );
     setQuiz((lastQuiz) => [

@@ -34,7 +34,7 @@ function StartQuiz() {
   const getDataQuiz = async () => {
     try {
       showSnackbar(true, "Loading...", "loading");
-      const { data } = await axios.get("https://edure.vercel.app/api/quiz");
+      const { data } = await axios.get("http://localhost:3000/api/quiz");
       showSnackbar(false, null, null);
       if (!data.length) setIsQuizEmpty(true);
       setQuiz(data);
