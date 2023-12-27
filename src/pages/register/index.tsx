@@ -29,7 +29,7 @@ function Register() {
 
       setTimeout(() => {
         showSnackbar(false, null, null);
-        location.reload();
+        router.replace("/login");
       }, 2000);
     } catch (error: any) {
       showSnackbar(true, error.response.data.message, "error");
