@@ -13,12 +13,12 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     const loginData = req.body as LoginDataType;
-    // const privateKeyLogin = process.env.PRIVATE_KEY_LOGIN as string;
+    const privateKeyLogin = process.env.PRIVATE_KEY_LOGIN as string;
     const jwtToken = jsonwebtoken.sign(
       {
         email: loginData.email,
       },
-      "edurekomodo47"
+      privateKeyLogin
     );
 
     try {
