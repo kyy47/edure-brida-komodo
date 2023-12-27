@@ -68,7 +68,7 @@ function Tracking() {
     try {
       showSnackbar(true, "Loading...", "loading");
       const { data } = await axios.post(
-        "https://edure.vercel.app/api/track-cycle",
+        "http://localhost:3000/api/track-cycle",
         resultData
       );
 
@@ -88,7 +88,7 @@ function Tracking() {
   const getUserFromId = async (id: string) => {
     try {
       const { data } = await axios.get(
-        `https://edure.vercel.app/api/user/byid?id=${id}`
+        `http://localhost:3000/api/user/byid?id=${id}`
       );
       setName(data.username || "User");
     } catch (error: any) {
@@ -116,7 +116,7 @@ function Tracking() {
           <Heading className="text-center mt-15%">
             Your Menstrual Cycle Tracker Results
           </Heading>
-          <SimpleSection className="w-full mt-20">
+          <SimpleSection className="w-full mt-10 md:mt-20">
             <div>
               <h3 className="font-semibold text-xl max-w-[500px]">
                 Hi <span className="text-cranberry-500"> {name || "User"}</span>{" "}
@@ -159,16 +159,16 @@ function Tracking() {
                 </Description>
               </div>
             </div>
-            <div className="flex justify-end items-end w-full flex-1">
-              <div className="relative min-w-[200px] min-h-[300px] -top-6 ">
-                <div className="absolute  bottom-0 right-[250px] ">
-                  <div className="relative  right-0 w-[200px] h-[200px] ">
+            <div className="flex  justify-start md:justify-end items-end w-full flex-1">
+              <div className="relative min-w-[200px] min-h-[300px] top-8 md:-top-6 ">
+                <div className="absolute  bottom-0 right-[250px]  ">
+                  <div className="relative  md:-right-4 w-[200px] h-[200px] ">
                     <Image
                       fill
                       alt="tracking_image"
                       src="/tracking_image.png"
                       priority
-                      className="object-contain "
+                      className="object-contain hidden md:block "
                     />
                   </div>
                 </div>
@@ -180,12 +180,12 @@ function Tracking() {
                   selected={date}
                   onSelect={setDate}
                   numberOfMonths={1}
-                  className="absolute top-0 bg-white right-3 pointer-events-none "
+                  className="absolute top-0 bg-white md:right-3 pointer-events-none "
                 />
               </div>
             </div>
           </SimpleSection>
-          <Description className="text-center px-36 mt-14 min-w-full ">
+          <Description className="text-center px-4 md:px-6.25 xl:px-36  min-w-full mt-24 md:mt-16 ">
             Make sure you get adequate nutrition. Consume more vegetables,
             especially those rich in iron, and unsaturated fats, such as olive
             oil, which can support reproductive health.
@@ -215,8 +215,9 @@ function Tracking() {
           </div>
         </>
       )}
+      {counter != 4 && <div className="h-[60vh]"></div>}
 
-      <div className="min-h-[60vh]">
+      <div className="">
         {counter == 1 && (
           <MyModal
             onClickNext={() => {

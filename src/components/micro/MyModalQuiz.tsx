@@ -9,7 +9,8 @@ type MyModalQuizProp = {
   choiceA: string;
   choiceB: string;
   correctChoice: string;
-  quiz: QuizResponse[];
+  onResultAnswers: (choice: "A" | "B", correctChoice: string) => void;
+  index: number;
 };
 function MyModalQuiz({
   onClickNext,
@@ -18,6 +19,8 @@ function MyModalQuiz({
   choiceA,
   choiceB,
   correctChoice,
+  onResultAnswers,
+  index,
 }: MyModalQuizProp) {
   if (type === "choice") {
     return (
@@ -27,25 +30,27 @@ function MyModalQuiz({
             <p className="text-cranberry-600 text-xl font-semibold text-center">
               {question}
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-col gap-3 md:flex-row md:gap-4">
               <ButtonPrimary
                 variant="medium-outline"
                 onClick={() => {
                   onClickNext();
+                  onResultAnswers("A", correctChoice);
                 }}
-                className="pointer-events-auto cursor-pointer flex gap-3 items-center flex-1"
+                className="pointer-events-auto cursor-pointer flex gap-3 items-center flex-1 w-full md:w-fit"
               >
-                <span className=" bg-black p-2 rounded-md text-white">A.</span>{" "}
+                <span className=" bg-black p-2 rounded-md text-white">A</span>{" "}
                 {choiceA}
               </ButtonPrimary>
               <ButtonPrimary
                 variant="medium-outline"
                 onClick={() => {
                   onClickNext();
+                  onResultAnswers("B", correctChoice);
                 }}
-                className="flex-1 pointer-events-auto cursor-pointer flex gap-3 items-center"
+                className="flex-1 pointer-events-auto cursor-pointer flex gap-3 items-center w-full md:w-fit"
               >
-                <span className="bg-black p-2 rounded-md text-white">B.</span>{" "}
+                <span className="bg-black p-2 rounded-md text-white">B</span>{" "}
                 {choiceB}
               </ButtonPrimary>
             </div>
