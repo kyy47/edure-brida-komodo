@@ -20,6 +20,7 @@ function StartQuiz() {
   const { Snackbar, showSnackbar } = useSnackbar();
   const [isReview, setIsReview] = useState(false);
   const [indexReview, setIndexReview] = useState(0);
+  const [isQuizEmpty, setIsQuizEmpty] = useState(false);
 
   const handleCheckAnswers = (choice: "A" | "B", correctChoice: string) => {
     setAnswersUser((answersUser) => [...answersUser, choice]);
@@ -33,8 +34,9 @@ function StartQuiz() {
   const getDataQuiz = async () => {
     try {
       showSnackbar(true, "Loading...", "loading");
-      const { data } = await axios.get("http://localhost:3000/api/quiz");
+      const { data } = await axios.get("https://edure.vercel.app/api/quiz");
       showSnackbar(false, null, null);
+      if (!data.length) setIsQuizEmpty(true);
       setQuiz(data);
     } catch (error: any) {
       showSnackbar(true, error.response.data.message, "warning");
@@ -52,17 +54,17 @@ function StartQuiz() {
     return (
       <>
         <Snackbar />
-        {!quiz.length && (
+        {isQuizEmpty ? (
           <Heading className="text-center mt-40 mb-80 text-cranberry-600 min-h-[500px]">
             Tidak Ada Quiz Hari ini
           </Heading>
-        )}
-        {quiz.length && counter === quiz.length && (
+        ) : null}
+        {quiz.length && counter === quiz.length ? (
           <ModalResultQuiz
             resultAnswers={resultAnswers}
             onClickReview={() => setIsReview(true)}
           />
-        )}
+        ) : null}
         {quiz.map(
           (item, index) =>
             index === counter && (

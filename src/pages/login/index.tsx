@@ -24,7 +24,7 @@ function Login() {
     try {
       showSnackbar(true, "Login....", "loading");
       const { data } = await axios.post(
-        "http://localhost:3000/api/signin",
+        "https://edure.vercel.app/api/signin",
         formDataJson
       );
 
